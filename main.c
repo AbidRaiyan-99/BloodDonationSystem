@@ -1,7 +1,12 @@
+#include "login.h"
 #include "menu.h"
 
 int main()
 {
-    mainMenu();
+    if (login() == 1)
+    {
+        mainMenu();
+    }
+
     return 0;
 }

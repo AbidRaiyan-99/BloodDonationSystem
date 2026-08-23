@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include "menu.h"
 #include "donor.h"
+#include "stock.h"
 
 void mainMenu()
 {
@@ -8,11 +9,17 @@ void mainMenu()
 
     do
     {
-        printf("\n========== BLOOD DONATION SYSTEM ==========\n");
+        printf("\n==========================================\n");
+        printf("         BLOOD DONATION SYSTEM\n");
+        printf("==========================================\n");
         printf("1. Add Donor\n");
         printf("2. Display Donors\n");
         printf("3. Search Donor\n");
-        printf("4. Exit\n");
+        printf("4. Update Donor\n");
+        printf("5. Delete Donor\n");
+        printf("6. Blood Stock\n");
+        printf("7. Exit\n");
+        printf("==========================================\n");
         printf("Enter Choice: ");
         scanf("%d", &choice);
 
@@ -31,6 +38,18 @@ void mainMenu()
             break;
 
         case 4:
+            updateDonor();
+            break;
+
+        case 5:
+            deleteDonor();
+            break;
+
+        case 6:
+            stockMenu();
+            break;
+
+        case 7:
             printf("\nThank You!\n");
             break;
 
@@ -38,5 +57,5 @@ void mainMenu()
             printf("\nInvalid Choice!\n");
         }
 
-    } while (choice != 4);
+    } while (choice != 7);
 }

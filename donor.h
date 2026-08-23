@@ -12,5 +12,7 @@ typedef struct
 void addDonor();
 void displayDonors();
 void searchDonor();
+void updateDonor();
+void deleteDonor();
 
 #endif
